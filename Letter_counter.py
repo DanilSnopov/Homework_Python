@@ -1,9 +1,9 @@
-def counter(x):
-    words = x.split(' ')
+def counter(inp):
+    words = inp.split(' ')
     big_word = 0
-    for i in range(len(words)):
+    for index in range(len(words)):
         upper = 0
-        for letter in words[i]:
+        for letter in words[index]:
             if (letter.isupper()):
                 upper += 1
         if upper >= len(words[i]) / 2:
