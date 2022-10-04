@@ -1,4 +1,4 @@
-from Letter_counter import counter
+from LetterCounter import Lettercounter
 import pytest
 
 
@@ -7,4 +7,5 @@ tests = [("ANKJNkj kmjoijoijOIJOIJoiHHOIHJOIHOUB ygytf", '66%'), ('osjgdoi OUHUY
 
 @pytest.mark.parametrize('inp, result', tests)
 def test_counter(inp, result):
-    assert counter(inp) == result
+    """Прогоняет тесты по импортированной функции."""
+    assert Lettercounter(inp) == result
