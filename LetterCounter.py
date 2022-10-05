@@ -1,17 +1,21 @@
-"""flake8 - придира. а модуль делает то, что делает функция."""
+"""Модуль делает то, что делает функция."""
 
 
 def lettercounter(inp):
+    """Принимает.
 
-    
-    """Принимает слова через пробел, возвращает % слов, в которых заглавных букв больше."""
+    Args:
+        inp(string): несколько слов, разделенных пробелами
+
+    возвращает: % слов, в которых заглавных букв больше.
+    """
     words = inp.split(' ')
     big_word = 0
-    for index in range(len(words)):
+    for index in list(enumerate(words)):
         upper = 0
-        for letter in words[index]:
+        for letter in words[index[0]]:
             if (letter.isupper()):
                 upper += 1
-        if upper >= len(words[index]) / 2:
+        if upper >= len(words[index[0]]) / 2:
             big_word += 1
     return ('{0}%'.format(big_word * 100 // (len(words))))

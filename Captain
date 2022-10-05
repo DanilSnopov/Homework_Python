@@ -1,2 +1,12 @@
-def notes(date, note):
-    return
+import datetime
+
+def notes():
+    notesdict = {}
+    while True:
+        inp = input()
+        if inp == 'q':
+            break
+        notesdict[str(datetime.date.today())] = inp
+
+    return notesdict
+print(notes())
