@@ -11,9 +11,11 @@ def notes(year, month, day, noteslist):
         day(int): день первой записи
         noteslist(list): список ежедневных записей
     """
-    notesdict = {}
-    daynow = date(year, month, day)
-    for note in noteslist:
-        notesdict[str(daynow)] = note
-        daynow += timedelta(1)
-    return notesdict
+    with open("Captain.txt", 'a') as fil:
+        daynow = date(year, month, day)
+        for note in noteslist:
+            fil.write("{0}: {1}\n".format(str(daynow), note))
+            daynow += timedelta(1)
+
+
+notes(2001, 4, 28, ['one', 'two', 'three', 'four', 'five'])
