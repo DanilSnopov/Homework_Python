@@ -27,7 +27,7 @@ then
                 for passwordcut in $(cat onepassword)
                 do
                     password=$passwordcut
-                    echo _>onepassword
+                    rm onepassword
                     break
                 done
                 if [[ $line == $password ]]
