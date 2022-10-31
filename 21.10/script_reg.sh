@@ -23,7 +23,7 @@ then
     echo $log >> logins
     echo "{{$password}}" | md5sum >>passwords
     echo "
-Registrated succesfully"
+Registered succesfully"
 else
     echo "
 User $log already exists"
